@@ -1,0 +1,7 @@
+pymysql
+llama_index
+google.generativeai
+dotenv
+sklearn
+numpy
+redis
