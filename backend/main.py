@@ -1,5 +1,6 @@
 import redis
 import numpy as np
+import os
 from llama_index.readers.database import DatabaseReader
 from sklearn.metrics.pairwise import cosine_similarity
 from embeddings import generate_embeddings
@@ -19,7 +20,7 @@ readers = DatabaseReader(
     host="127.0.0.1",  
     port="3306",  
     user="root",  
-    password="Archilles5522",  
+    password=f"{os.getenv('password')}",  
     dbname="User",  
 )
 

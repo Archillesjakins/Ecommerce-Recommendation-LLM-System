@@ -1,4 +1,5 @@
 from llama_index.readers.database import DatabaseReader
+import os
 import pymysql
 MySQLdb = pymysql.install_as_MySQLdb()
 
@@ -14,7 +15,7 @@ reader = DatabaseReader(
     host="127.0.0.1",  
     port="3306",  
     user="root",  
-    password="Archilles5522",  
+    password=f"{os.getenv('password')}",  
     dbname="User",  
 )
 
